@@ -1,0 +1,14 @@
+{
+  "title": "OWASP SKF XML External Entity Injection",
+  "description": "A Python 2 Flask page that parses XML posted by the user with xml.dom.pulldom and renders the expanded <items> element back.",
+  "question": "Declare an external entity in the XML you submit to read a local file from the server (XML external entity injection).",
+  "category": "WEB",
+  "difficulty": 2,
+  "evidence_kind": "SECRET",
+  "capabilities": [
+    "xxe",
+    "xml",
+    "arbitrary-file-read",
+    "injection"
+  ]
+}
