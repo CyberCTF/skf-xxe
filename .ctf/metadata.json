@@ -4,11 +4,5 @@
   "question": "Declare an external entity in the XML you submit to read a local file from the server (XML external entity injection).",
   "category": "WEB",
   "difficulty": 2,
-  "evidence_kind": "SECRET",
-  "capabilities": [
-    "xxe",
-    "xml",
-    "arbitrary-file-read",
-    "injection"
-  ]
+  "evidence_kind": "SECRET"
 }
