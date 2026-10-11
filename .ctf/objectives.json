@@ -1,0 +1,54 @@
+{
+  "objectives": [
+    {
+      "key": "main",
+      "title": "Read the flag",
+      "prompt": "Read a local file through the XML parser: get /ctf/flag.",
+      "check": {
+        "evidence": "SECRET",
+        "format": "FLAG{%s}"
+      },
+      "dev": "FLAG{dev-skf-xxe}",
+      "hints": [
+        "The posted XML is parsed and the items element is shown back to you.",
+        "Read about XML external entities and the document type declaration."
+      ],
+      "steps": [
+        {
+          "key": "param",
+          "title": "Find the input",
+          "prompt": "Which form field carries the XML? (field name)",
+          "check": {
+            "answer": [
+              "xxe"
+            ]
+          }
+        },
+        {
+          "key": "decl",
+          "title": "Name the mechanism",
+          "prompt": "In which part of an XML document are entities declared? (acronym)",
+          "check": {
+            "answer": [
+              "dtd",
+              "doctype",
+              "document type definition"
+            ]
+          }
+        },
+        {
+          "key": "class",
+          "title": "Name the weakness",
+          "prompt": "What class of vulnerability is this?",
+          "check": {
+            "answer": [
+              "xxe",
+              "xml external entity",
+              "xml external entity injection"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
